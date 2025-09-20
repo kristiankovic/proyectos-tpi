@@ -1,0 +1,113 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.1rem;
+}
+
+.container{
+    padding: 1.2rem;
+    background-color: rgb(45, 95, 45);
+
+    display: grid;
+    grid-template-areas:'header . .' 
+                        'card card card';
+
+    place-content: center;
+    gap: 1.4rem;
+
+    height: 91vh;
+}
+
+.container__index{
+    padding: 1.2rem;
+    background-color: rgb(45, 95, 45);
+
+    display: grid;
+    grid-template-areas:'header . .' 
+                        'card card card';
+
+    place-content: center;
+    gap: 1.4rem;
+
+    height: 100%;
+}
+
+.header{
+    grid-area: 'header';
+
+    display: grid;
+    grid-template-columns: 1fr;
+
+    place-content: center;
+    background-color: rgb(30, 30, 30);
+
+    height: 85px;
+
+    position: sticky;
+    top: 0;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 1.1rem;
+}
+
+.navbar li{
+    text-decoration: none;
+    list-style: none;
+
+    padding: 10px;
+}
+
+li a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: aqua;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 15px;
+    height: auto;
+    width: 420px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: rgb(41, 41, 151);
+    grid-area: 'card';
+}
+
+.card h1{
+    font-size: 1.4rem;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    color: yellow
+}
+
+.card p{
+    padding-bottom: 25px;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.card img{
+    height: 350px;
+    width: 350px;
+
+    border-radius: 25px;
+}

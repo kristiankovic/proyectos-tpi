@@ -1,0 +1,7 @@
+imagen 
+
+docker build -t php-server .
+
+contenedor
+
+docker run -it --name vv23011-contenedor-server -p 8080:80 -v .:/var/www/html php-server
