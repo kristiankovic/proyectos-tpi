@@ -6,7 +6,8 @@ $url = "https://www.youtube.com/watch?v=xGaXH7spCyA";
 
 // se usan %% para delimitar la expresion regular en vez de //
 
-$patron = "%^(https://)?(www\.)?(youtu\.be|youtube)(\.com)?/(watch\?v=)?(\w{10,11})%";
+// para ignorar los matches de patrones se usa ?:
+$patron = "%^(?:https://)?(?:www\.)?(?:youtu\.be|youtube)(\.com)?/(?:watch\?v=)?(\w{10,11})/i%";
 
 if (preg_match($patron, $url, $matches)) {
 

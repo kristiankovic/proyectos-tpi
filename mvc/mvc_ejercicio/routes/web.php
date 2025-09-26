@@ -1,26 +1,8 @@
 <?php
 
-
 use lib\Route;
-use App\Controllers\HomeController;
+use app\controllers\HomeController;
 
-
-Route::get("/", function(){
-    echo "RUTA RAIZ";
-});
-
-
-Route::get("/inicio", function(){
-    echo "Inicio";
-});
-
+Route::get("/", [HomeController::class, "index"]);
 
 Route::dispatch();
-
-Route::get("/Home", [HomeController::class,"index"]);
-
-Route::get("/inicio/:flag", function($flag){
-    return  array('nombre'=>"cristian");
-});
-
-?>
