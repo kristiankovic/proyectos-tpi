@@ -1,0 +1,9 @@
+generar imagen
+
+docker build -t ejercicio-img .
+
+---------------------------------------------------------------------------
+
+generar contenedor
+
+docker run -it --name ejercicio-imagen -p 8080:80 -v .:/var/www/html ejercicio-img 

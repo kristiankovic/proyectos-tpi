@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+}
+
+.caja{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100vw;
+}
+table{
+    border: 1px solid black;
+}
+
+table th, td{
+    padding: 10px;
+    border: 1px solid black;
+}
