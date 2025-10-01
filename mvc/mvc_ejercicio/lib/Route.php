@@ -2,21 +2,21 @@
 
 namespace lib;
 
-class Route
-{
+class Route{
+
     private static $routes = [];
-    private static $URL_BASE = "/mvc_ejercicio/public";
+
+    //Asigna la ruta raiz del proyecto
+    private static $URL_BASE = "/mvc/mvc_ejercicio/public";
 
     //metodo para los gets
-    public static function get($uri, $callback)
-    {
+    public static function get($uri, $callback){
 
         self::$routes["GET"][self::$URL_BASE . $uri] = $callback;
     }
 
     //metodo para los posts
-    public static function post($uri, $callback)
-    {
+    public static function post($uri, $callback){
 
         self::$routes["POST"][self::$URL_BASE . $uri] = $callback;
     }
@@ -26,6 +26,8 @@ class Route
         $uri = $_SERVER["REQUEST_URI"];
 
         $method = $_SERVER["REQUEST_METHOD"];
+
+        //var_dump(self::$routes);
 
         foreach (self::$routes[$method] as $url => $funcion) {
 
@@ -53,6 +55,7 @@ class Route
             }
         }
 
-        echo "Ruta no encontrada";
+        echo "Ruta no encontrada <br>";
+        var_dump($_SERVER["REQUEST_URI"]);
     }
 }

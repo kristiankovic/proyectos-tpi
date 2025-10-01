@@ -1,0 +1,11 @@
+apagar los contenedores
+
+docker -compose down
+
+-----------------------------------
+docker compose up --d --build
+
+-----------------------------------
+encender los contenedores
+
+docker -compose up

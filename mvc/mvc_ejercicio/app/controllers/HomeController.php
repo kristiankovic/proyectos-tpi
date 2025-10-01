@@ -10,6 +10,14 @@ class HomeController{
         return $this->view('HomeView');
     }
 
+    public function recibirDatos(){
+
+    }
+
+    public function datosPost(){
+        
+    }
+
     public function view($vista, $data = []){
 
         extract($data);
